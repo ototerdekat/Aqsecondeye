@@ -1,8 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <!-- Halaman Utama (Homepage) -->
   <url>
     <loc>https://aqsecondeye.my.id/</loc>
     <lastmod>2026-08-26</lastmod>
-    <priority>1.0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>1.00</priority>
   </url>
+
+  <!-- Seksi Layanan B2B Quality Inspection -->
+  <url>
+    <loc>https://aqsecondeye.my.id/#services</loc>
+    <lastmod>2026-08-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Seksi Layanan Local Property Survey -->
+  <url>
+    <loc>https://aqsecondeye.my.id/#local</loc>
+    <lastmod>2026-08-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Seksi Kontak / Request Quote -->
+  <url>
+    <loc>https://aqsecondeye.my.id/#contact</loc>
+    <lastmod>2026-08-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+
 </urlset>
