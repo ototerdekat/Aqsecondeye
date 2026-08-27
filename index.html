@@ -26,6 +26,8 @@
       --text-dark: #0F172A;
       --white: #FFFFFF;
       --border: #E2E8F0;
+      --wa-green: #25D366;
+      --wa-hover: #20BA5A;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
@@ -73,6 +75,35 @@
     .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 10px 14px; border: 1px solid var(--border); border-radius: 6px; font-size: 1rem; }
     .btn-submit { width: 100%; background: var(--accent); color: var(--white); padding: 12px; border: none; border-radius: 6px; font-size: 1rem; font-weight: 600; cursor: pointer; }
     .btn-submit:hover { background: var(--accent-hover); }
+
+    .wa-direct-box { text-align: center; margin-bottom: 30px; background: #F0FDF4; border: 1px solid #BBF7D0; padding: 20px; border-radius: 8px; }
+    .btn-wa-direct { display: inline-block; margin-top: 10px; background-color: var(--wa-green); color: white; padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: 600; transition: background 0.2s; }
+    .btn-wa-direct:hover { background-color: var(--wa-hover); }
+
+    /* Floating WhatsApp Button */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background-color: var(--wa-green);
+      color: #FFF;
+      border-radius: 50px;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 600;
+      box-shadow: 2px 5px 15px rgba(0,0,0,0.2);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 20px;
+      text-decoration: none;
+      transition: transform 0.2s, background-color 0.2s;
+    }
+    .whatsapp-float:hover {
+      transform: scale(1.05);
+      background-color: var(--wa-hover);
+    }
 
     footer { background: var(--primary); color: #94A3B8; padding: 30px 0; text-align: center; font-size: 0.9rem; }
   </style>
@@ -206,7 +237,19 @@
       <h2 class="section-title">Request a Service Quote</h2>
       <p class="section-subtitle">Need an independent eye on-ground? Send us your requirements and our team will get back to you shortly.</p>
 
-      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form">
+      <!-- Direct WhatsApp Box -->
+      <div class="wa-direct-box">
+        <p style="font-weight: 600; color: #166534;">Prefer instant messaging for fast inquiry?</p>
+        <a href="https://wa.me/6285813577557?text=Hello%20AQ%20SecondEye,%20I%20would%20like%20to%20inquire%20about%20your%20services." 
+           target="_blank" 
+           rel="noopener noreferrer"
+           class="btn-wa-direct">
+          💬 Chat Direct on WhatsApp (+62 858-1357-7557)
+        </a>
+      </div>
+
+      <!-- Contact Form -->
+      <form action="https://formspree.io/f/myegrokj" method="POST" class="contact-form">
         <div class="form-group">
           <label for="name">Full Name / Company Name *</label>
           <input type="text" id="name" name="name" placeholder="John Doe or Company Ltd." required>
@@ -247,6 +290,14 @@
       </form>
     </div>
   </section>
+
+  <!-- FLOATING WHATSAPP BUTTON -->
+  <a href="https://wa.me/6285813577557?text=Hello%20AQ%20SecondEye,%20I%20would%20like%20to%20inquire%20about%20your%20services." 
+     class="whatsapp-float" 
+     target="_blank" 
+     rel="noopener noreferrer">
+    <span style="font-size: 18px;">💬</span> Quick WhatsApp Chat
+  </a>
 
   <!-- FOOTER -->
   <footer>
