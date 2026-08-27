@@ -1,189 +1,258 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-09P7PQYDTN"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-09P7PQYDTN');
-</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- SEO Meta Tags -->
-  <title>AQ SecondEye | Quality Inspection & Location Survey Services in Indonesia</title>
-  <meta name="description" content="Independent Third-Party Quality Inspection, Factory Audit, and Location/Property Survey Services in Indonesia (Jabodetabek). Professional field reports for global & local buyers.">
-  
-  <!-- FontAwesome & CSS Styles -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <title>AQ SecondEye | Quality Inspection, Field Survey & Product Sourcing</title>
+  <meta name="description" content="Independent on-ground verification, B2B quality inspection, site surveys, and product sourcing services in Indonesia.">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-09P7PQYDTN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-09P7PQYDTN');
+  </script>
+
   <style>
+    :root {
+      --primary: #0F172A;
+      --accent: #2563EB;
+      --accent-hover: #1D4ED8;
+      --bg-light: #F8FAFC;
+      --text-main: #334155;
+      --text-dark: #0F172A;
+      --white: #FFFFFF;
+      --border: #E2E8F0;
+    }
+
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-    body { color: #333; line-height: 1.6; background-color: #f8f9fa; }
+    body { background-color: var(--bg-light); color: var(--text-main); line-height: 1.6; }
     
-    /* Header & Navigation */
-    header { background: #1e293b; color: #fff; padding: 1rem 8%; display: flex; justify-content: space-between; align-items: center; sticky; top: 0; z-index: 1000; }
-    .logo { font-size: 1.5rem; font-weight: bold; color: #38bdf8; }
-    nav a { color: #f8fafc; text-decoration: none; margin-left: 1.5rem; font-weight: 500; }
-    nav a:hover { color: #38bdf8; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
     
-    /* Hero Section */
-    .hero { background: linear-gradient(rgba(30, 41, 59, 0.85), rgba(30, 41, 59, 0.85)), url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1350&q=80'); background-size: cover; background-position: center; color: #fff; padding: 5rem 8%; text-align: center; }
-    .hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
-    .hero p { font-size: 1.2rem; max-width: 800px; margin: 0 auto 2rem; color: #cbd5e1; }
-    .btn-primary { background: #0284c7; color: #fff; padding: 0.8rem 1.8rem; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block; border: none; cursor: pointer; }
-    .btn-primary:hover { background: #0369a1; }
+    header { background: var(--white); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; }
+    .nav-container { display: flex; justify-content: space-between; align-items: center; height: 70px; }
+    .logo { font-size: 1.4rem; font-weight: 700; color: var(--primary); text-decoration: none; }
+    .logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: 20px; list-style: none; }
+    .nav-links a { text-decoration: none; color: var(--text-main); font-weight: 500; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--accent); }
+
+    .hero { background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%); color: var(--white); padding: 80px 0; text-align: center; }
+    .hero h1 { font-size: 2.5rem; margin-bottom: 20px; }
+    .hero p { font-size: 1.1rem; color: #94A3B8; max-width: 700px; margin: 0 auto 30px; }
+    .btn-hero { display: inline-block; background: var(--accent); color: var(--white); padding: 12px 30px; border-radius: 6px; text-decoration: none; font-weight: 600; }
+    .btn-hero:hover { background: var(--accent-hover); }
+
+    section { padding: 60px 0; }
+    .section-title { text-align: center; font-size: 2rem; color: var(--text-dark); margin-bottom: 10px; }
+    .section-subtitle { text-align: center; color: #64748B; margin-bottom: 40px; }
+
+    .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
     
-    /* Services Section */
-    .services { padding: 4rem 8%; text-align: center; }
-    .services h2 { font-size: 2rem; margin-bottom: 2rem; color: #0f172a; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
-    .card { background: #fff; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); text-align: left; border-top: 4px solid #0284c7; }
-    .card i { font-size: 2.5rem; color: #0284c7; margin-bottom: 1rem; }
-    .card h3 { margin-bottom: 0.8rem; color: #1e293b; }
-    
-    /* Local Survey Section */
-    .local-section { background: #e0f2fe; padding: 4rem 8%; text-align: center; }
-    .local-section h2 { color: #0369a1; margin-bottom: 1rem; }
-    
-    /* Pricing Section */
-    .pricing { padding: 4rem 8%; text-align: center; background: #fff; }
-    .price-card { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 2rem; margin: 1rem 0; }
-    .price-amount { font-size: 1.8rem; font-weight: bold; color: #0284c7; margin: 1rem 0; }
-    
-    /* Contact Section */
-    .contact { padding: 4rem 8%; background: #0f172a; color: #fff; text-align: center; }
-    .form-container { max-width: 600px; margin: 2rem auto; text-align: left; background: #1e293b; padding: 2rem; border-radius: 8px; }
-    .form-group { margin-bottom: 1.2rem; }
-    .form-group label { display: block; margin-bottom: 0.5rem; color: #cbd5e1; }
-    .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 0.8rem; border-radius: 4px; border: 1px solid #334155; background: #0f172a; color: #fff; }
-    
-    /* Footer */
-    footer { background: #020617; color: #64748b; text-align: center; padding: 1.5rem; font-size: 0.9rem; }
+    .card { background: var(--white); border: 1px solid var(--border); border-radius: 8px; padding: 30px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); }
+    .card .icon { font-size: 2rem; margin-bottom: 15px; }
+    .card h3 { font-size: 1.25rem; color: var(--text-dark); margin-bottom: 15px; }
+    .card ul { list-style: none; margin-top: 15px; }
+    .card ul li { margin-bottom: 8px; font-size: 0.95rem; }
+
+    .pricing-card { position: relative; background: var(--white); border: 1px solid var(--border); border-radius: 8px; padding: 30px; text-align: center; display: flex; flex-direction: column; justify-content: space-between; }
+    .pricing-card.featured { border: 2px solid var(--accent); }
+    .badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--accent); color: var(--white); padding: 4px 12px; font-size: 0.75rem; font-weight: 700; border-radius: 20px; text-transform: uppercase; }
+    .btn-price { display: block; background: var(--primary); color: var(--white); padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: 600; margin-top: 20px; }
+    .btn-price.btn-featured { background: var(--accent); }
+
+    .pricing-note { background: #EFF6FF; border-left: 4px solid var(--accent); padding: 15px 20px; margin-top: 40px; border-radius: 4px; font-size: 0.9rem; }
+
+    .contact-form { background: var(--white); border: 1px solid var(--border); border-radius: 8px; padding: 40px; max-width: 700px; margin: 0 auto; }
+    .form-group { margin-bottom: 20px; }
+    .form-group label { display: block; margin-bottom: 8px; font-weight: 600; color: var(--text-dark); }
+    .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 10px 14px; border: 1px solid var(--border); border-radius: 6px; font-size: 1rem; }
+    .btn-submit { width: 100%; background: var(--accent); color: var(--white); padding: 12px; border: none; border-radius: 6px; font-size: 1rem; font-weight: 600; cursor: pointer; }
+    .btn-submit:hover { background: var(--accent-hover); }
+
+    footer { background: var(--primary); color: #94A3B8; padding: 30px 0; text-align: center; font-size: 0.9rem; }
   </style>
 </head>
 <body>
 
-  <!-- Header -->
+  <!-- HEADER / NAVIGATION -->
   <header>
-    <div class="logo"><i class="fas fa-eye"></i> AQ SecondEye</div>
-    <nav>
-      <a href="#services">Services</a>
-      <a href="#local">Local Site Survey</a>
-      <a href="#pricing">Pricing</a>
-      <a href="#contact">Contact Us</a>
-    </nav>
+    <div class="container nav-container">
+      <a href="#" class="logo">AQ <span>SecondEye</span></a>
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#pricing">Models</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
   </header>
 
-  <!-- Hero -->
+  <!-- HERO SECTION -->
   <section class="hero">
-    <h1>Your Independent Inspection & Site Verification Partner in Indonesia</h1>
-    <p>Professional Third-Party Quality Inspection for International Buyers & On-Demand Location/Property Surveys in Jabodetabek Corridor.</p>
-    <a href="#contact" class="btn-primary">Request an Inspection</a>
-  </section>
-
-  <!-- Services (B2B Global) -->
-  <section class="services" id="services">
-    <h2>Global Quality Inspection Services</h2>
-    <div class="grid">
-      <div class="card">
-        <i class="fas fa-microscope"></i>
-        <h3>Product Quality Inspection</h3>
-        <p>Comprehensive visual, dimensional, and functional check based on ISO 2859-1 (AQL) standards. Detailed defect categorization (Critical, Major, Minor).</p>
-      </div>
-      <div class="card">
-        <i class="fas fa-industry"></i>
-        <h3>Factory & Supplier Audit</h3>
-        <p>On-site verification of manufacturer capacity, ISO/IATF quality management systems, machinery, and production reliability in Indonesia.</p>
-      </div>
-      <div class="card">
-        <i class="fas fa-boxes-packing"></i>
-        <h3>Pre-Shipment Inspection (PSI)</h3>
-        <p>Final loading and container supervision to ensure correct packaging, quantity, and product specification compliance before shipping.</p>
-      </div>
+    <div class="container">
+      <h1>Your Independent On-Ground Eyes & Hands</h1>
+      <p>Professional Quality Inspection, Site & Field Surveys, and Strategic Product Sourcing across Indonesia.</p>
+      <a href="#contact" class="btn-hero">Request Inquiry Quote</a>
     </div>
   </section>
 
-  <!-- Local Property Survey (Target Lokal) -->
-  <section class="local-section" id="local">
-    <h2>Jasa Survei Lokasi & Lahan (Khusus Domestik)</h2>
-    <p style="max-width: 700px; margin: 0 auto 2rem; color: #334155;">Mau beli tanah, rumah, atau lahan usaha di Cikarang/Bekasi tetapi posisi Anda di luar kota? Kami siap jadi <strong>"mata independen"</strong> Anda di lapangan sebelum Anda buang waktu & biaya perjalanan.</p>
-    <div class="grid">
-      <div class="card" style="border-top-color: #0369a1;">
-        <i class="fas fa-map-location-dot" style="color: #0369a1;"></i>
-        <h3>Verifikasi Fisik & Akses Jalan</h3>
-        <p>Pengukuran lebar jalan riil, kondisi aspal/tanah, elevasi lahan terhadap jalan utama, serta ketersediaan tiang listrik & drainase.</p>
-      </div>
-      <div class="card" style="border-top-color: #0369a1;">
-        <i class="fas fa-camera-rotate" style="color: #0369a1;"></i>
-        <h3>Dokumentasi Foto & Video HD</h3>
-        <p>Foto resolusi tinggi sudut tajam, Geotagging lokasi akurat, dan video <em>drive-thru</em> dari jalur tol utama menuju lokasi lahan.</p>
-      </div>
-      <div class="card" style="border-top-color: #0369a1;">
-        <i class="fas fa-comments" style="color: #0369a1;"></i>
-        <h3>Pengamatan Lingkungan Sekitar</h3>
-        <p>Wawancara singkat warga/RT lokal mengenai bebas banjir, keamanan lingkungan, serta potensi sengketa atau gangguan sutet/TPA.</p>
-      </div>
-    </div>
-  </section>
+  <!-- SERVICES SECTION -->
+  <section id="services">
+    <div class="container">
+      <h2 class="section-title">Our Core Services</h2>
+      <p class="section-subtitle">Reliable On-Demand Field Inspection, Verification & Sourcing Solutions</p>
 
-  <!-- Pricing -->
-  <section class="pricing" id="pricing">
-    <h2>Transparent Inspection Pricing</h2>
-    <div class="grid">
-      <div class="price-card">
-        <h3>Local Property Survey</h3>
-        <div class="price-amount">Mulai Rp 350.000</div>
-        <p>Cek lokasi fisik tanah/rumah di area Jabodetabek. Dokumentasi lengkap + Laporan Ringkas PDF.</p>
-      </div>
-      <div class="price-card">
-        <h3>B2B Quality Inspection</h3>
-        <div class="price-amount">Custom Man-Day Quote</div>
-        <p>Official Third-Party Inspection report with AQL standard for foreign buyers & enterprise importers.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact / Inquiry Form -->
-  <section class="contact" id="contact">
-    <h2>Get in Touch / Request Quote</h2>
-    <p>Submit your inquiry below or reach out directly for immediate support.</p>
-    
-    <div class="form-container">
-      <form action="https://formspree.io/f/myegrokj" method="POST">
-        <div class="form-group">
-          <label>Name / Company</label>
-          <input type="text" name="name" required placeholder="John Doe / PT XYZ">
+      <div class="grid-3">
+        <!-- Service 1 -->
+        <div class="card">
+          <div class="icon">🔍</div>
+          <h3>Quality Inspection & Factory Audit</h3>
+          <p>Comprehensive quality control and manufacturing process verification tailored for automotive, industrial, and consumer product standards (ISO / IATF guidelines).</p>
+          <ul>
+            <li>✓ Initial & During Production Checks</li>
+            <li>✓ Pre-Shipment Inspection (PSI)</li>
+            <li>✓ Factory Audit & CAR Verification</li>
+          </ul>
         </div>
-        <div class="form-group">
-          <label>Email Address</label>
-          <input type="email" name="email" required placeholder="name@company.com">
+
+        <!-- Service 2 -->
+        <div class="card">
+          <div class="icon">📍</div>
+          <h3>Site & Field Inspection Survey</h3>
+          <p>Independent on-ground verification for properties, land, assets, and business locations, providing complete clarity and data before you invest or sign contracts.</p>
+          <ul>
+            <li>✓ Physical Property & Land Check</li>
+            <li>✓ Location Accessibility & Risk Mapping</li>
+            <li>✓ High-Res Photo/Video Executive Summary</li>
+          </ul>
         </div>
+
+        <!-- Service 3 -->
+        <div class="card">
+          <div class="icon">📦</div>
+          <h3>Strategic Product Sourcing</h3>
+          <p>End-to-end supplier identification and material procurement service to help international buyers find verified local manufacturers with guaranteed quality standards.</p>
+          <ul>
+            <li>✓ Verified Supplier Background Screening</li>
+            <li>✓ Sample Evaluation & Production Audit</li>
+            <li>✓ Price & Term Negotiation Support</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING / ENGAGEMENT MODELS SECTION -->
+  <section id="pricing" style="background-color: #F1F5F9;">
+    <div class="container">
+      <h2 class="section-title">Flexible Engagement Models</h2>
+      <p class="section-subtitle">Tailored inspection and sourcing solutions designed around your specific project requirements.</p>
+
+      <div class="grid-3">
+        <!-- Model 1 -->
+        <div class="pricing-card">
+          <h3>Quality Inspection & Audit</h3>
+          <p class="section-subtitle" style="margin-bottom: 20px;">Factory & Production Verification</p>
+          <ul>
+            <li>✓ Factory & ISO/IATF Process Audit</li>
+            <li>✓ DUPRO & Pre-Shipment Inspection</li>
+            <li>✓ AQL Sampling & Defect Classification</li>
+            <li>✓ Detailed PDF Report within 24 Hours</li>
+          </ul>
+          <a href="#contact" class="btn-price">Get Inspection Quote</a>
+        </div>
+
+        <!-- Model 2 -->
+        <div class="pricing-card featured">
+          <div class="badge">On-Demand</div>
+          <h3>Site & Field Inspection</h3>
+          <p class="section-subtitle" style="margin-bottom: 20px;">Property, Land & Asset Survey</p>
+          <ul>
+            <li>✓ On-Ground Physical Condition Check</li>
+            <li>✓ Location Accessibility & Environment Audit</li>
+            <li>✓ High-Resolution Photo & Video Proof</li>
+            <li>✓ Complete Executive Field Summary</li>
+          </ul>
+          <a href="#contact" class="btn-price btn-featured">Get Survey Quote</a>
+        </div>
+
+        <!-- Model 3 -->
+        <div class="pricing-card">
+          <h3>Strategic Product Sourcing</h3>
+          <p class="section-subtitle" style="margin-bottom: 20px;">Supplier & Material Screening</p>
+          <ul>
+            <li>✓ 3-5 Verified Local Supplier Shortlist</li>
+            <li>✓ Production Capacity Verification</li>
+            <li>✓ Sample Collection & Evaluation</li>
+            <li>✓ Price & Term Negotiation Support</li>
+          </ul>
+          <a href="#contact" class="btn-price">Get Sourcing Quote</a>
+        </div>
+      </div>
+
+      <div class="pricing-note">
+        <p><strong>Custom Pricing:</strong> All quotes are calculated transparently based on project location, complexity, and estimated man-days. <a href="#contact">Contact us</a> for an immediate consultation.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT & FORM SECTION -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Request a Service Quote</h2>
+      <p class="section-subtitle">Need an independent eye on-ground? Send us your requirements and our team will get back to you shortly.</p>
+
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form">
         <div class="form-group">
-          <label>Service Type</label>
-          <select name="service">
-            <option value="B2B Quality Inspection">B2B Quality Inspection (Foreign Buyers)</option>
-            <option value="Local Property Survey">Survei Lokasi/Tanah (Klien Lokal)</option>
-            <option value="Supplier Audit">Factory / Supplier Audit</option>
+          <label for="name">Full Name / Company Name *</label>
+          <input type="text" id="name" name="name" placeholder="John Doe or Company Ltd." required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Business Email Address *</label>
+          <input type="email" id="email" name="email" placeholder="name@company.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone / WhatsApp Number *</label>
+          <input type="tel" id="phone" name="phone" placeholder="+62 812 XXXX XXXX" required>
+        </div>
+
+        <div class="form-group">
+          <label for="service">Select Service Required *</label>
+          <select id="service" name="service" required>
+            <option value="" disabled selected>-- Choose a Service --</option>
+            <option value="Quality Inspection & Factory Audit">Quality Inspection & Factory Audit</option>
+            <option value="Site & Field Inspection Survey">Site & Field Inspection Survey</option>
+            <option value="Strategic Product Sourcing">Strategic Product Sourcing</option>
+            <option value="Other / General Inquiry">Other / General Inquiry</option>
           </select>
         </div>
+
         <div class="form-group">
-          <label>Message / Location Details</label>
-          <textarea name="message" rows="4" required placeholder="Specify inspection location, product details, or property survey address..."></textarea>
+          <label for="location">Target Location / Region *</label>
+          <input type="text" id="location" name="location" placeholder="e.g., Greater Jakarta / Jabodetabek, West Java, etc." required>
         </div>
-        <button type="submit" class="btn-primary" style="width: 100%;">Submit Inquiry</button>
+
+        <div class="form-group">
+          <label for="message">Project Details & Requirements *</label>
+          <textarea id="message" name="message" rows="5" placeholder="Please describe your project scope, product target, or location details..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit">Send Inquiry Request</button>
       </form>
     </div>
-
-    <p style="margin-top: 1.5rem;">Or contact us directly via WhatsApp: <br>
-      <a href="https://wa.me/6285813577557" target="_blank" style="color: #38bdf8; text-decoration: none; font-weight: bold; font-size: 1.1rem;"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
-    </p>
   </section>
 
-  <!-- Footer -->
+  <!-- FOOTER -->
   <footer>
-    <p>&copy; 2026 AQ SecondEye Inspection Services Indonesia. All Rights Reserved.</p>
+    <div class="container">
+      <p>&copy; 2026 AQ SecondEye. All rights reserved. Professional Field Inspection & Technical Sourcing Services.</p>
+    </div>
   </footer>
 
 </body>
